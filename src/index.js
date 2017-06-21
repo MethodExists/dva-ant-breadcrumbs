@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import './styles.less';
+import styles from './styles.less';
 
 export default class extends Component {
   render() {
     return <div>
       <h2>Welcome to React components</h2>
-      <div className="red">
+      <div className={styles.red}>
         This is a styled text
       </div>
     </div>
