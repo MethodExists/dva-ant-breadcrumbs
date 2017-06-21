@@ -6,7 +6,7 @@ import Example from '../../src'
 class Demo extends Component {
   render() {
     return <div>
-      <h1>dva-antd-breadcrumbs Demo</h1>
+      <h1>dva-antd-breadcrumbs Demo page</h1>
       <Example/>
     </div>
   }

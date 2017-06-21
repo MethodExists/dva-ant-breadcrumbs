@@ -1,5 +1,5 @@
 {
-  "name": "dva-antd-breadcrumbs",
+  "name": "dva-antd-breadcrumbs-test",
   "version": "1.0.0",
   "description": "dva-antd-breadcrumbs React component",
   "main": "lib/index.js",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "nwb": "0.17.x",
+    "nwb-less": "^0.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
