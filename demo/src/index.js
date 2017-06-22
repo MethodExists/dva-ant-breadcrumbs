@@ -1,10 +1,10 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import dva from 'dva';
 import { Router, browserHistory } from 'dva/router';
 import Demo from './Demo';
 
-function router({ history, app }) {
+function router({ history }) { // eslint-disable-line react/prop-types
   const routes = [{
     path: '/',
     component: Demo,
@@ -13,7 +13,7 @@ function router({ history, app }) {
       component: Demo,
       childRoutes: [{
         path: ':foo',
-        getTitle: ({ foo }) => foo,
+        getTitle: ({ foo }) => `${foo} × ${foo}`,
         component: Demo,
       }],
     }, {

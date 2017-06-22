@@ -43,6 +43,7 @@ class Demo extends Component {
             dataSource={dataSource}
             columns={columns}
             pagination={false}
+            style={{ background: 'white' }}
           />
         </Layout.Content>
       </Layout>
