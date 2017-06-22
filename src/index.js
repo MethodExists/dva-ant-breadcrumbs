@@ -50,8 +50,8 @@ const mapStateToProps = (state, { params, routes: [/* skip root route */, ...rou
     (_.isFunction(route.getTitle) && route.getTitle(params, state)) ||
     // then fallback to static title
     route.title ||
-    // then try to make a title from the path
-    _.startCase(route.path);
+    // then try to make a title from the parameter value
+    _.startCase(route.path.startsWith(':') ? params[route.path.substr(1)] : route.path);
 
   const breadcrumbs = routesWithPath.map((route, index) => ({
     path: absolutePaths[index],
