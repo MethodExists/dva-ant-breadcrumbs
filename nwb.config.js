@@ -7,7 +7,7 @@ module.exports = {
   babel: {
     cherryPick: ['lodash'],
     plugins: [
-      ['import', { libraryName: 'antd', style: 'css' }],
+      ['import', { libraryName: 'antd', style: true }],
     ],
   },
 };
