@@ -38,7 +38,7 @@ Breadcrumbs.propTypes = {
   //
   /* eslint-disable react/no-unused-prop-types */
   routes: PropTypes.arrayOf(PropTypes.shape({
-    path: PropTypes.string.isRequired,
+    path: PropTypes.string,
   })).isRequired,
   params: PropTypes.object.isRequired,
   /* eslint-enable react/no-unused-prop-types */
