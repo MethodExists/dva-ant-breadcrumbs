@@ -11,9 +11,8 @@ function Breadcrumbs({ breadcrumbs }) {
     path: '/',
     title: <Icon type="home" />,
   };
-  console.log(breadcrumbs)
   return (
-    <Breadcrumb className='dva-ant-breadcrumbs'>
+    <Breadcrumb className="dva-ant-breadcrumbs">
       {
         [rootBreadcrumb].concat(breadcrumbs).map(({ path, title }) => (
           <Breadcrumb.Item key={path} >
