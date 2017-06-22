@@ -1,15 +1,21 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React from 'react';
+import {render} from 'react-dom';
+import dva from 'dva';
+import { Router, browserHistory } from 'dva/router';
+import Demo from './Demo';
 
-import Example from '../../src'
+function router({ history, app }) {
+  const routes = [{
+    path: '/',
+    component: Demo,
+  }];
 
-class Demo extends Component {
-  render() {
-    return <div>
-      <h1>dva-antd-breadcrumbs Demo page</h1>
-      <Example/>
-    </div>
-  }
+  return <Router history={history} routes={routes} />;
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+const app = dva({ history: browserHistory });
+app.router(router);
+
+const App = app.start();
+
+render(<App/>, document.querySelector('#demo'));
