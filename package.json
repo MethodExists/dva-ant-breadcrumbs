@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "antd": "2.x",
+    "babel-plugin-import": "^1.2.1",
     "dva": "1.x",
     "eslint-config": "github:MethodExists/eslint-config",
     "nwb": "0.17.x",
