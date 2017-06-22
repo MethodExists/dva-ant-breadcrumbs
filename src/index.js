@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import styles from './styles.less';
+import './styles.less';
+import './styles.css';
 
 export default class extends Component {
   render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-      <div className={styles.red}>
-        This is a styled text
+    return (
+      <div>
+        <div className='styleLess'>Style from less</div>
+        <div className='styleCss'>Style from css</div>
       </div>
-    </div>
+    );
   }
 }
