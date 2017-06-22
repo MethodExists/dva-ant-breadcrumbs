@@ -38,7 +38,7 @@ class Demo extends Component {
         </Layout.Header>
         <Layout.Content style={{ padding: 32 }}>
           <Card style={{ padding: 30, marginBottom: 32 }}>
-            <Breadcrumbs routes={routes} params={params} />
+            <Breadcrumbs routes={routes} params={params} separator="»" />
           </Card>
           <Table
             dataSource={dataSource}
