@@ -17,7 +17,13 @@
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
-    "lint": "eslint src test"
+    "lint": "eslint src test",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint"
+    ]
   },
   "dependencies": {
     "lodash": "4.x"
@@ -32,6 +38,8 @@
     "babel-plugin-import": "^1.2.1",
     "dva": "1.x",
     "eslint-config": "github:MethodExists/eslint-config",
+    "husky": "^0.14.0",
+    "lint-staged": "^4.0.0",
     "nwb": "0.17.x",
     "nwb-less": "^0.6.0",
     "react": "^15.6.1",
