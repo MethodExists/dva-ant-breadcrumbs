@@ -20,7 +20,9 @@
     "lint": "eslint src tests",
     "precommit": "lint-staged",
     "prepublish": "npm run test && npm run build",
-    "prepush": "npm run lint --silent && npm run test"
+    "prepush": "npm run lint --silent && npm run test",
+    "patch": "npm run prepublish && npm version patch && git push && git push --tags && npm publish",
+    "minor": "npm run prepublish && npm version minor && git push && git push --tags && npm publish"
   },
   "lint-staged": {
     "*.{js,jsx}": [
