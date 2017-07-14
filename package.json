@@ -3,10 +3,8 @@
   "version": "0.0.1",
   "description": "Antd’s Breadcrumb component connected to dva router",
   "main": "lib/index.js",
-  "module": "es/index.js",
   "files": [
     "css",
-    "es",
     "lib",
     "umd"
   ],
@@ -17,12 +15,12 @@
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
-    "lint": "eslint src tests",
+    "lint": "eslint src tests demo/src",
     "precommit": "lint-staged",
-    "prepublish": "npm run test && npm run build",
+    "prepublishOnly": "npm run test && npm run build",
     "prepush": "npm run lint --silent && npm run test",
-    "patch": "npm run prepublish && npm version patch && git push && git push --tags && npm publish",
-    "minor": "npm run prepublish && npm version minor && git push && git push --tags && npm publish"
+    "patch": "npm run prepublishOnly && npm version patch && git push --no-verify && git push --tags --no-verify && npm publish --ignore-scripts",
+    "minor": "npm run prepublishOnly && npm version minor && git push --no-verify && git push --tags --no-verify && npm publish --ignore-scripts"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -38,10 +36,10 @@
     "react": "15.x"
   },
   "devDependencies": {
+    "@methodexists/eslint-config": "^0.0.1",
     "antd": "2.x",
     "babel-plugin-import": "^1.2.1",
     "dva": "1.x",
-    "eslint-config": "github:MethodExists/eslint-config",
     "husky": "^0.14.0",
     "lint-staged": "^4.0.0",
     "nwb": "0.17.x",
