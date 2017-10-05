@@ -2,6 +2,12 @@
 
 Antd’s Breadcrumb component connected to dva router.
 
+## Installation
+
+```
+npm i @methodexists/dva-ant-breadcrumbs
+```
+
 ## Usage
 
 Put `<Breadcrumbs />` component inside render method of your route component:
