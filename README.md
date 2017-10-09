@@ -13,7 +13,7 @@ npm i @methodexists/dva-ant-breadcrumbs
 Put `<Breadcrumbs />` component inside render method of your route component:
 
 ```
-const UsersPage = ({ routes, prams }) => (
+const UsersPage = ({ routes, params }) => (
   <div>
     <Breadcrumbs routes={routes} params={params} />
   </div>
