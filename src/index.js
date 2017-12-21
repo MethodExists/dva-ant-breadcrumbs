@@ -6,7 +6,7 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 
 // props exposed by antd Breadcrumb component
-// https://github.com/ant-design/ant-design/blob/master/components/breadcrumb/Breadcrumb.tsx#L9-L15
+// https://github.com/ant-design/ant-design/blob/de340a83baa4a73766e226131d0e5f3413808e70/components/breadcrumb/Breadcrumb.tsx#L14-L20
 const antProps = ['prefixCls', 'separator', 'itemRender', 'style', 'className'];
 
 function Breadcrumbs({ breadcrumbs, ...restProps }) {

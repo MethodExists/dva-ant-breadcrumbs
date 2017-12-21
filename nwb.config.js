@@ -8,6 +8,11 @@ module.exports = {
     cherryPick: ['lodash'],
     plugins: [
       ['import', { libraryName: 'antd', style: true }],
+      ['module-resolver', {
+        alias: {
+          dva: 'dva-react-router-3',
+        },
+      }],
     ],
   },
 };
