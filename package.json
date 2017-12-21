@@ -1,6 +1,6 @@
 {
   "name": "@methodexists/dva-ant-breadcrumbs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Antd’s Breadcrumb component connected to dva router",
   "main": "lib/index.js",
   "files": [
